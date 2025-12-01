@@ -1,14 +1,16 @@
 import "./App.css";
 import Card from "./components/Card";
-import FetchingPokemon from "./components/FetchingPokemon";
+import CardDetails from "./components/CardDetails";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      <p>PoKEMON</p>
-      <FetchingPokemon />
-      <Card />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Card />}/>
+        <Route path="/pokemon/:id" element={<CardDetails />}/>
+      </Routes>
+    </Router>
   );
 };
 

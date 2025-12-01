@@ -19,7 +19,7 @@ const FetchingPokemon = () => {
   return (
     <div>
       <input
-        className="border border-amber-800"
+        className="border border-amber-800 text-gray-900"
         type="text"
         onChange={(e) => {
           setPokemonName(e.target.value);
